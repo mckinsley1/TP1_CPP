@@ -29,3 +29,7 @@ void EmployeeSyndique::setNombreHeureTravailler(double nombreHeureTravailler) {
 double EmployeeSyndique::getNombreHeureTravailler() {
     return nombreHeureTravailler;
 }
+
+double EmployeeSyndique::calculPaie() {
+    return salaireHoraire * nombreHeureTravailler;
+}

@@ -97,16 +97,31 @@ int main(int argc, const char * argv[]) {
                 break;
             }
             case 4:
-                cout << "Choix 4" << endl;
+                if (count > 0) {
+                    for(int i = 0; i < count; i++) {
+                        cout << listeEmployee[i]->getNomDeFamille() << " " << listeEmployee[i]->getNumeroMatricule() << endl;
+                        cout << "Paie Brute de: " << listeEmployee[i]->calculPaie() << endl;
+                        cout << "Impot CA de: " << listeEmployee[i]->getImpotFederaux() * listeEmployee[i]->calculPaie() << endl;
+                        cout << "Impot QC de: " << listeEmployee[i]->getImpotProvinciaux() * listeEmployee[i]->calculPaie() << endl;
+                        cout << "Paie nette de: " << listeEmployee[i]->calculPaie() - ((listeEmployee[i]->getImpotProvinciaux() + listeEmployee[i]->getImpotFederaux()) * listeEmployee[i]->calculPaie()) << "\n" << endl;
+                    }
+                    
+                    cout << "TOTAUX" << endl;
+                    int paieNetTotal = 0;
+                    int impotCA = 0;
+                    int impotQC = 0;
+                    for(int i = 0; i < count; i++) {
+                        paieNetTotal += listeEmployee[i]->calculPaie() - ((listeEmployee[i]->getImpotProvinciaux() + listeEmployee[i]->getImpotFederaux()) * listeEmployee[i]->calculPaie());
+                        impotCA += listeEmployee[i]->calculPaie() * listeEmployee[i]->getImpotFederaux();
+                        impotQC += listeEmployee[i]->calculPaie() * listeEmployee[i]->getImpotProvinciaux();
+                    }
+                    cout << "Montants totaux verses de: " << paieNetTotal << endl;
+                    cout << "Impots a transferer CA de: " << impotCA << endl;
+                    cout << "Impots a transferer QC de: " << impotQC << "\n" << endl;
+                    
+                }
                 break;
             case 5:
-                cout << "Choix 5" << endl;
-                
-                for(int i = 0; i < count; i++) {
-                    cout << listeEmployee[i]->getNomDeFamille() << endl;
-                    delete listeEmployee[i];
-                }
-                
                 break;
             default:
                 cout << "Votre choix n'est pas valide veuillez ressayez de nouveaux" << endl;

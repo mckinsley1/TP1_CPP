@@ -24,7 +24,7 @@ public:
     void setNombreDeSemaine(int nombreDeSemaine);
     int getNombreDeSemaine();
     
-    double calculPaie(int montantFixe, int nombreDeSemaine);
+    double calculPaie();
 };
 
 #endif /* EmployeeContractuel_hpp */

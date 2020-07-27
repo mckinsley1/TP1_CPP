@@ -31,6 +31,6 @@ int EmployeeContractuel::getNombreDeSemaine() {
     return nombreDeSemaine;
 }
 
-double EmployeeContractuel::calculPaie(int montantFixe, int nombreDeSemaine) {
+double EmployeeContractuel::calculPaie() {
     return montantFixe / nombreDeSemaine;
 }

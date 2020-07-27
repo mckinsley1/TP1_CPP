@@ -28,13 +28,10 @@ public:
     void setNumeroMatricule(int numeroMatricule);
     int getNumeroMatricule();
     
-    void setImpotFederaux(double impotFed);
     double getImpotFederaux();
-    
-    void setImpotProvinciaux(double impotProv);
     double getImpotProvinciaux();
     
-    double calculPaie(double salaireHoraire, double nombreHeureTravailler);
+    virtual double calculPaie();
 };
 
 

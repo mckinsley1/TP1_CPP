@@ -14,6 +14,8 @@
 Employee::Employee(string nomDeFamille, int numeroDeMatricule) {
     this->nomDeFamille = nomDeFamille;
     this->numeroDeMatricule = numeroDeMatricule;
+    this->impotFederaux = 0.15;
+    this->impotProvinciaux = 0.15;
 
 }
 
@@ -33,24 +35,16 @@ int Employee::getNumeroMatricule() {
     return numeroDeMatricule;
 }
 
-void Employee::setImpotFederaux(double impotFed) {
-    this->impotFederaux = impotFed;
-}
-
 double Employee::getImpotFederaux() {
     return impotFederaux;
-}
-
-void Employee::setImpotProvinciaux(double impotProv) {
-    this->impotProvinciaux = impotProv;
 }
 
 double Employee::getImpotProvinciaux() {
     return impotProvinciaux;
 }
 
-double Employee::calculPaie(double salaireHoraire, double nombreHeureTravailler) {
-    return salaireHoraire * nombreHeureTravailler;
+double Employee::calculPaie() {
+    return 0;
 }
 
 

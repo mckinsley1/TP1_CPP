@@ -24,6 +24,8 @@ public:
     void setNombreHeureTravailler(double nombreHeureTravailler);
     double getNombreHeureTravailler();
     
+    double calculPaie();
+    
 };
 
 #endif /* EmployeeSyndique_hpp */
