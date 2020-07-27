@@ -18,7 +18,7 @@ private:
 public:
     EmployeePonctuel(string nomDeFamille, int numeroDeMatricule, int montantUnique);
     void setMontantUnique(int montantUnique);
-    int getMontantUnique();
+    double calculPaie();
 };
 
 #endif /* EmployePonctuel_hpp */
