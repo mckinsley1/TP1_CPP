@@ -13,13 +13,8 @@
 
 Employee::Employee(string nomDeFamille, int numeroDeMatricule) {
     this->nomDeFamille = nomDeFamille;
-    
-    if (numeroDeMatricule <= 10000 & numeroDeMatricule >= 99999) {
-        this->numeroDeMatricule = numeroDeMatricule;
-    } else {
-        std::cout << "Numero de matricule fournis invalide" << std::endl;
-    }
-    
+    this->numeroDeMatricule = numeroDeMatricule;
+
 }
 
 void Employee::setNomDeFamille(string nomDeFamille) {
