@@ -9,6 +9,7 @@
 #ifndef EmployeeSyndique_hpp
 #define EmployeeSyndique_hpp
 
+#include <iostream>
 #include <stdio.h>
 #include "Employee.hpp"
 
@@ -24,8 +25,7 @@ public:
     void setNombreHeureTravailler(double nombreHeureTravailler);
     double getNombreHeureTravailler();
     
-    double calculPaie();
-    
+    double calculPaie();    
 };
 
 #endif /* EmployeeSyndique_hpp */

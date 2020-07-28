@@ -13,7 +13,9 @@
 
 Employee::Employee(string nomDeFamille, int numeroDeMatricule) {
     this->nomDeFamille = nomDeFamille;
-    this->numeroDeMatricule = numeroDeMatricule;
+    if(numeroDeMatricule > 10000 & numeroDeMatricule < 99999) {
+       this->numeroDeMatricule = numeroDeMatricule;
+    }
     this->impotFederaux = 0.15;
     this->impotProvinciaux = 0.15;
 
@@ -46,6 +48,7 @@ double Employee::getImpotProvinciaux() {
 double Employee::calculPaie() {
     return 0;
 }
+
 
 
 

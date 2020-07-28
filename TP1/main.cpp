@@ -53,7 +53,6 @@ int main(int argc, const char * argv[]) {
                 listeEmployee[count] = new EmployeeSyndique(nomDeFamille, numeroDeMatricule, salaireHoraire, nombreHeureTravailler);
                 
                 count++;
-                
                 break;
             }
             case 2: {
@@ -107,9 +106,9 @@ int main(int argc, const char * argv[]) {
                     }
                     
                     cout << "TOTAUX" << endl;
-                    int paieNetTotal = 0;
-                    int impotCA = 0;
-                    int impotQC = 0;
+                    double paieNetTotal = 0;
+                    double impotCA = 0;
+                    double impotQC = 0;
                     for(int i = 0; i < count; i++) {
                         paieNetTotal += listeEmployee[i]->calculPaie() - ((listeEmployee[i]->getImpotProvinciaux() + listeEmployee[i]->getImpotFederaux()) * listeEmployee[i]->calculPaie());
                         impotCA += listeEmployee[i]->calculPaie() * listeEmployee[i]->getImpotFederaux();
@@ -122,7 +121,11 @@ int main(int argc, const char * argv[]) {
                 }
                 break;
             case 5:
+                for(int i = 0; i < count; i++) {
+                    delete listeEmployee[i];
+                }
                 break;
+            break;
             default:
                 cout << "Votre choix n'est pas valide veuillez ressayez de nouveaux" << endl;
                 break;

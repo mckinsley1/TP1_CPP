@@ -9,6 +9,7 @@
 #ifndef Employee_hpp
 #define Employee_hpp
 
+#include <iostream>
 #include <stdio.h>
 #include <string>
 
@@ -32,6 +33,7 @@ public:
     double getImpotProvinciaux();
     
     virtual double calculPaie();
+    virtual ~Employee(){}
 };
 
 

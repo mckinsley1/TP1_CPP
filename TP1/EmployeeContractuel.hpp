@@ -9,6 +9,7 @@
 #ifndef EmployeeContractuel_hpp
 #define EmployeeContractuel_hpp
 
+#include <iostream>
 #include <stdio.h>
 #include "Employee.hpp"
 

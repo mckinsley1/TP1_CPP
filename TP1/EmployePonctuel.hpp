@@ -9,6 +9,7 @@
 #ifndef EmployePonctuel_hpp
 #define EmployePonctuel_hpp
 
+#include <iostream>
 #include <stdio.h>
 #include "Employee.hpp"
 
